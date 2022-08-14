@@ -6,7 +6,7 @@
 #include <stdbool.h>
 
 typedef struct QueueNode{
-
+    
     int val;
     struct QueueNode *prox, *ant;
 
@@ -33,7 +33,7 @@ void Queue_CreateQueue(Queue *f);
  * @param val Valor.
  * @return Retorna o endereço do nó criado.
  */
-QNode *Queue_CreateNode(int val);
+QNode *Queue_CreateQNode(int val);
 
 /**
  * @brief Verifica se a fila está vazia.
@@ -64,7 +64,7 @@ void Queue_RemoveFirstQueue(Queue *f);
  * 
  * @param f Endereço da Fila(&f).
  */
-void Queue_PrintQueue(Queue *s);
+void Queue_PrintQueue(Queue *f);
 
 /**
  * @brief Imprime o primeiro elementoda fila.
@@ -72,15 +72,14 @@ void Queue_PrintQueue(Queue *s);
  * @param f Endereço da Fila(&f);
  * @return Retorna o primeiro valor da fila.
  */
-int Queue_FirstInQueue(Queue *s);
+int Queue_FirstInQueue(Queue *f);
 
 /**
  * @brief Desaloca a Fila.
  * 
  * @param f Endereço da Fila(&f).
  */
-void Queue_DestroyQueue(Queue *s);
-
+void Queue_DestroyQueue(Queue *f);
 
 
 #endif
